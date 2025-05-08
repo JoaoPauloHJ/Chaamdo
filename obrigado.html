@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chamado Enviado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f3f3f3;
+      padding: 40px;
+    }
+    .popup {
+      display: inline-block;
+      padding: 20px 30px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      border-radius: 10px;
+      font-size: 18px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="popup">
+    ✔️ Chamado enviado com sucesso!
+  </div>
+
+  <audio autoplay>
+    <source src="arquivos/check-mark_oPG7Xo5.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    // Redireciona para o formulário principal após 5 segundos
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 5000);
+  </script>
+
+</body>
+</html>
