@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Abertura de Chamados</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <h1>Abertura de Chamado - Supermercado</h1>
+
+    <form id="formChamado">
+        <label for="filial">Filial</label>
+        <select id="filial" required>
+        </select>
+
+        <label for="caixa">Número do Caixa:</label>
+        <select id="caixa" required>
+            <option value="">Selecione</option>
+            <script>
+                for (let i = 1; i <= 16; i++) {
+                    document.write(`<option value="${i}">Caixa ${i}</option>`);
+                }
+            </script>
+        </select>
+
+        <label for="descricao">Descreva o Problema:</label>
+        <textarea id="descricao" rows="4" required></textarea>
+
+        <button type="submit">Abrir Chamado</button>
+    </form>
+
+    <h2>Chamados Abertos</h2>
+    <div id="listaChamados"></div>
+    
+    <div id="popupSucesso" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+          <div class="popup-icon">✔️</div>
+          <p>Chamado enviado com sucesso!</p>
+          <button onclick="fecharPopup()">OK</button>
+        </div>
+      </div>
+      <audio id="somSucesso" src="arquivos/lula-tira.mp3" preload="auto"></audio>      
+</body>
+<script src="index.js"></script>
+</html>
