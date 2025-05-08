@@ -45,6 +45,9 @@ button {
     background-color: #fff;
 }
 
+.button {
+    background: none;
+}
 
 .popup-overlay {
     position: fixed;
